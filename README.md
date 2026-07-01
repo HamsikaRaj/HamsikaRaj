@@ -1,68 +1,89 @@
 <h1 align="center">Hi, I'm Hamsika 👋</h1>
 
 <p align="center">
-  <b>AI/ML Engineer</b> — I build <b>RAG systems</b>, <b>LLM agents </b> that keep them honest.
+  <b>AI/ML Engineer</b> — Building RAG systems, LLM agents, and production-ready AI tools
 </p>
 
 <p align="center">
+  <a href="https://linkedin.com/in/hamsikarg"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:hamsikaraog@gmail.com"><img src="https://img.shields.io/badge/Email-hamsikaraog@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
-  <!-- Add your LinkedIn: replace the URL below -->
-  <a href="https://www.linkedin.com/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <img src="https://img.shields.io/badge/New%20York-📍-333333?style=flat-square" alt="New York">
 </p>
 
 ---
 
 ### About
 
-I'm an AI/ML engineer focused on taking language models from prototype to something you'd actually ship. My work spans **retrieval-augmented generation**, **multi-agent orchestration**, and **rigorous evaluation** — plus a foundation in classic deep learning (GANs, reinforcement learning, forecasting). I care about systems that are not just impressive in a demo, but measurable, access-controlled, and reliable in production.
+I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the University at Buffalo. Most of my work sits at the point where language models meet real systems — taking a promising demo and turning it into something with access control, cost budgets, and evaluation you can actually trust.
 
-- 🔭 Building RAG pipelines, agentic systems, and LLM evaluation tooling
-- 🧠 Deep learning background: generative models, RL, and time-series forecasting
-- 🛠️ Comfortable across the stack — model, backend API, and UI
-- 📫 Reach me at **hamsikaraog@gmail.com**
+I like the unglamorous parts: figuring out *why* one model is 18× slower than another, catching a retrieval pipeline that hallucinates on out-of-scope questions, or proving an agent's output is correct before it ships. Before focusing on AI, I built backend microservices and data pipelines, so I tend to think about models and the infrastructure around them together.
+
+Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM routing and evaluation.
+
+---
+
+### What I work on
+
+- **RAG systems** — retrieval pipelines with access control, multi-backend vector search, and evaluation harnesses that measure faithfulness and catch hallucinations instead of eyeballing outputs.
+- **LLM agents** — multi-agent orchestration with LangGraph, self-correcting review loops, and per-task model routing to keep cost and latency in check.
+- **Applied ML** — reinforcement learning, computer vision, and classical modeling, usually taken all the way to a deployed, measurable result.
+- **Production engineering** — FastAPI backends, Docker, cloud (GCP / AWS / Azure), and the profiling and monitoring that keep the above honest.
+
+---
+
+### Tech I use
+
+**Languages** — Python · SQL · TypeScript · JavaScript
+
+**GenAI & LLMs** — RAG · LangChain · LangGraph · Anthropic Claude · Gemini · Groq · RAGAS · LLM-as-Judge · MCP · Multi-Agent Orchestration · Prompt Engineering
+
+**ML & Deep Learning** — PyTorch · TensorFlow · scikit-learn · XGBoost · CNNs / RNNs / LSTM · DQN / DDQN
+
+**Retrieval & Vector DBs** — FAISS · Qdrant · ChromaDB · Weaviate · Sentence Transformers
+
+**Cloud & MLOps** — GCP (Vertex AI, BigQuery) · AWS (Lambda, SageMaker, S3, EC2, ECR) · Azure (Databricks, Data Factory) · Weights & Biases · Docker · Kubernetes
+
+**Data Engineering** — Apache Airflow · PySpark · Snowflake · Kafka · BigQuery
+
+**Backend & Web** — FastAPI · Spring Boot · React · Streamlit · REST · SSE · JWT
+
+**Databases** — PostgreSQL · MongoDB · MySQL · Redis · SQLite
 
 ---
 
 ### Featured Projects
 
-| Project | What it does | Stack |
-|---|---|---|
-| 🤖 [**multi-agent-coding-assistant**](https://github.com/HamsikaRaj/multi-agent-coding-assistant) | Turns a single prompt into reviewed, production-ready code via 5 orchestrated Claude agents (plan → architect → code → review) | LangGraph · FastAPI · React · Claude |
-| 📊 [**rag-eval-harness**](https://github.com/HamsikaRaj/rag-eval-harness) | End-to-end RAG evaluation — retrieval metrics, LLM-as-judge scoring, claim-level hallucination detection, latency & cost tracking | Python · FAISS · Claude |
-| 🔐 [**FinSolve-RBAC-RAG**](https://github.com/HamsikaRaj/FinSolve-RBAC-RAG) | Role-based-access-control RAG chatbot — access enforced at the vector-search layer so users only see what their role permits | FastAPI · Qdrant · Claude · Streamlit |
-| 📈 [**rl-options-trading**](https://github.com/HamsikaRaj/rl-options-trading) | Deep Q-Network agent that learns an options-trading policy inside a custom Gym environment on real option-chain data | PyTorch · Gym · DQN |
-| 🎨 [**StyleGAN**](https://github.com/HamsikaRaj/StyleGAN) | StyleGAN trained from scratch on a balanced multi-category set (dogs / cars / food) for diverse 128×128 image generation | PyTorch · GAN |
-| 🏙️ [**insideairbnb-temporal-modeling**](https://github.com/HamsikaRaj/insideairbnb-temporal-modeling) | Night-level price & booking-probability forecasting — seasonality analysis, temporal splits, XGBoost & neural nets | XGBoost · TensorFlow · TensorBoard |
+**🤖 [Multi-Agent Coding Assistant](https://github.com/HamsikaRaj/multi-agent-coding-assistant)** &nbsp;·&nbsp; `LangGraph` `FastAPI` `React` `Claude`
+A 5-agent pipeline (Planner → Architect → Coder → two Reviewers) that turns a single prompt into a multi-file codebase — it shipped a 25-file React/TypeScript app in one run, with a self-correcting review loop that retries up to 3× to repair broken output before it ships. I routed models per task (Opus for generation, Sonnet for planning/review, a Haiku intent classifier out front) so a full dual-reviewer cycle costs ~$0.0007, and streamed per-agent tokens/latency/cost over SSE to find the real bottleneck.
+
+**📊 [RAG Evaluation Harness](https://github.com/HamsikaRaj/rag-eval-harness)** &nbsp;·&nbsp; `FastAPI` `FAISS` `Claude` `Pytest`
+An automated harness that uses Claude as an LLM-judge to replace manual RAG scoring, cutting evaluation effort ~90%. On a 75-question benchmark it measured faithfulness 0.996, hallucination rate 0.017, and Recall@5 0.87 / Recall@10 0.92. The retrieval layer is pluggable across FAISS, ChromaDB, Qdrant, and Weaviate, so benchmarking a new backend is a one-config change.
+
+**🔐 [FinSolve — RAG with Role-Based Access Control](https://github.com/HamsikaRaj/FinSolve-RBAC-RAG)** &nbsp;·&nbsp; `FastAPI` `Qdrant` `Claude` `JWT`
+A RAG chatbot where access is enforced at the vector-search layer: dual-layer RBAC across 6 role tiers and 5 department knowledge bases, reaching 100% access-control accuracy and 0 hallucinations across 16 adversarial test cases. Roles are derived dynamically from a 100-person HR dataset via JWT, and I replaced a local Llama 3.2 model that hallucinated on every out-of-scope query with Claude Sonnet, taking fabricated responses to zero.
+
+**📈 [RL for Derivatives Markets](https://github.com/HamsikaRaj/rl-options-trading)** &nbsp;·&nbsp; `PyTorch` `OpenAI Gym` `DDQN`
+A custom Gym environment with a 5-dimensional state space and a reward function I designed and debugged (an early version reward-hacked before I diagnosed and fixed it). A DDQN agent with prioritized experience replay took reward from near-zero to a 600+ moving average over 900 episodes, reaching 15% ROI with zero major drawdowns on NVDA call-option data.
+
+**⚽ [VARLite — Real-Time Offside Detection](https://github.com/HamsikaRaj/VARLite)** &nbsp;·&nbsp; `YOLOv8n` `OpenCV` `NumPy`
+Offside detection from single-camera football footage at >20 FPS and 95% detection accuracy on consumer GPUs, using YOLOv8n with SVD-based vanishing-point perspective correction. Multi-threaded video pipelines with geometric reconstruction and HSV team classification improved offside-call precision by 32%.
+
+**🌊 [Ripple — AI Policy Simulator](https://github.com/HamsikaRaj/Ripple)** &nbsp;·&nbsp; `React` `Gemini` `Monte Carlo`
+A deployed web app that pairs Monte Carlo simulation with Gemini to explore the downstream effects of policy changes — minimum wage, taxes, housing subsidies — across a synthetic population, before any of it happens in the real world.
 
 ---
 
-### Tech Stack
+### How I think about engineering
 
-**Languages**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-
-**AI / ML**
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square)
-![Anthropic](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=flat-square)
-
-**Retrieval / Data**
-![FAISS](https://img.shields.io/badge/FAISS-0467DF?style=flat-square)
-![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat-square)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-
-**Backend / Tooling**
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+- **Measure before you optimize.** Most of my wins came from profiling first — finding the 18× latency gap or the ~8.7s coder step — then fixing the thing that actually mattered.
+- **Evaluation is the feature.** For anything LLM-shaped, I build the way to score it before I trust it. A number I can defend beats a demo that looks good once.
+- **Correctness and access come first.** RBAC, grounding checks, and adversarial tests aren't polish — they're what makes an AI system safe to put in front of real users.
+- **Ship the whole thing.** A model isn't done until it's behind an API, in a container, and telling me how it's doing in production.
 
 ---
 
-<p align="center"><i>Open to AI/ML Engineer opportunities — let's build something reliable.</i></p>
+### Contact
+
+📍 New York &nbsp;·&nbsp; 📧 [hamsikaraog@gmail.com](mailto:hamsikaraog@gmail.com) &nbsp;·&nbsp; 💼 [LinkedIn](https://linkedin.com/in/hamsikarg)
+
+<p align="center"><i>Open to AI/ML Engineer, Applied AI, and Software Engineer (AI) roles.</i></p>
