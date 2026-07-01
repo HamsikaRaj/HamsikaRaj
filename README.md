@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Hamsika 👋</h1>
 
 <p align="center">
-  <b>AI/ML Engineer</b> — Building RAG systems, LLM agents, and production-ready AI tools
+  <b>AI/ML Engineer</b> Building RAG systems, LLM agents, and production-ready AI tools
 </p>
 
 <p align="center">
