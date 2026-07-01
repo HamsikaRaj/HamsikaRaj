@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Hamsika 👋</h1>
 
 <p align="center">
-  <b>AI/ML Engineer</b> — I build <b>RAG systems</b>, <b>LLM agents</b>, and the <b>evaluation harnesses</b> that keep them honest.
+  <b>AI/ML Engineer</b> — I build <b>RAG systems</b>, <b>LLM agents </b> that keep them honest.
 </p>
 
 <p align="center">
