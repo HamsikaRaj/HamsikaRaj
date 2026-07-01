@@ -14,7 +14,7 @@
 
 ### About
 
-I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the University at Buffalo. Most of my work sits at the point where language models meet real systems — taking a promising demo and turning it into something with access control, cost budgets, and evaluation you can actually trust.
+I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the University at Buffalo. Most of my work sits at the point where language models meet real systems, taking a promising demo and turning it into something with access control, cost budgets, and evaluation you can actually trust.
 
 I like the unglamorous parts: figuring out *why* one model is 18× slower than another, catching a retrieval pipeline that hallucinates on out-of-scope questions, or proving an agent's output is correct before it ships. Before focusing on AI, I built backend microservices and data pipelines, so I tend to think about models and the infrastructure around them together.
 
@@ -56,7 +56,7 @@ Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM r
 ### Featured Projects
 
 **🤖 [Multi-Agent Coding Assistant](https://github.com/HamsikaRaj/multi-agent-coding-assistant)** &nbsp;·&nbsp; `LangGraph` `FastAPI` `React` `Claude`
-A 5-agent pipeline (Planner → Architect → Coder → two Reviewers) that turns a single prompt into a multi-file codebase — it shipped a 25-file React/TypeScript app in one run, with a self-correcting review loop that retries up to 3× to repair broken output before it ships. I routed models per task (Opus for generation, Sonnet for planning/review, a Haiku intent classifier out front) so a full dual-reviewer cycle costs ~$0.0007, and streamed per-agent tokens/latency/cost over SSE to find the real bottleneck.
+A 5-agent pipeline (Planner → Architect → Coder → two Reviewers) that turns a single prompt into a multi-file codebase, it shipped a 25-file React/TypeScript app in one run, with a self-correcting review loop that retries up to 3× to repair broken output before it ships. I routed models per task (Opus for generation, Sonnet for planning/review, a Haiku intent classifier out front) so a full dual-reviewer cycle costs ~$0.0007, and streamed per-agent tokens/latency/cost over SSE to find the real bottleneck.
 
 **📊 [RAG Evaluation Harness](https://github.com/HamsikaRaj/rag-eval-harness)** &nbsp;·&nbsp; `FastAPI` `FAISS` `Claude` `Pytest`
 An automated harness that uses Claude as an LLM-judge to replace manual RAG scoring, cutting evaluation effort ~90%. On a 75-question benchmark it measured faithfulness 0.996, hallucination rate 0.017, and Recall@5 0.87 / Recall@10 0.92. The retrieval layer is pluggable across FAISS, ChromaDB, Qdrant, and Weaviate, so benchmarking a new backend is a one-config change.
@@ -71,7 +71,7 @@ A custom Gym environment with a 5-dimensional state space and a reward function 
 Offside detection from single-camera football footage at >20 FPS and 95% detection accuracy on consumer GPUs, using YOLOv8n with SVD-based vanishing-point perspective correction. Multi-threaded video pipelines with geometric reconstruction and HSV team classification improved offside-call precision by 32%.
 
 **🌊 [Ripple — AI Policy Simulator](https://github.com/HamsikaRaj/Ripple)** &nbsp;·&nbsp; `React` `Gemini` `Monte Carlo`
-A deployed web app that pairs Monte Carlo simulation with Gemini to explore the downstream effects of policy changes — minimum wage, taxes, housing subsidies — across a synthetic population, before any of it happens in the real world.
+A deployed web app that pairs Monte Carlo simulation with Gemini to explore the downstream effects of policy changes, minimum wage, taxes, housing subsidies across a synthetic population, before any of it happens in the real world.
 
 ---
 
