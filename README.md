@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Hamsika 👋</h1>
 
 <p align="center">
-  <b>AI/ML Engineer</b> Building RAG systems, LLM agents, and production-ready AI tools
+  <b>AI/ML Engineer</b> — Building RAG systems, LLM agents, and production-ready AI tools
 </p>
 
 <p align="center">
@@ -35,17 +35,19 @@ Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM r
 
 **Languages** — Python · SQL · TypeScript · JavaScript
 
-**GenAI & LLMs** — RAG · LangChain · LangGraph · Anthropic Claude · Gemini · Groq · RAGAS · LLM-as-Judge · MCP · Multi-Agent Orchestration · Prompt Engineering
+**GenAI & LLMs** — RAG · Hybrid Search · Embeddings · LangChain · LangGraph · Multi-Agent Orchestration · LLM Agents & Tool Calling · ReAct · MCP · Prompt Engineering · Fine-Tuning (PEFT / LoRA / QLoRA)
 
-**ML & Deep Learning** — PyTorch · TensorFlow · scikit-learn · XGBoost · CNNs / RNNs / LSTM · DQN / DDQN
+**LLM APIs & Evaluation** — Anthropic · OpenAI · Gemini · Groq · Hugging Face · RAGAS · LLM-as-Judge · Hallucination Detection
+
+**ML & Deep Learning** — PyTorch · TensorFlow · Transformers · scikit-learn · XGBoost · CNNs / LSTM · DQN / DDQN · Reward Design
 
 **Retrieval & Vector DBs** — FAISS · Qdrant · ChromaDB · Weaviate · Sentence Transformers
 
-**Cloud & MLOps** — GCP (Vertex AI, BigQuery) · AWS (Lambda, SageMaker, S3, EC2, ECR) · Azure (Databricks, Data Factory) · Weights & Biases · Docker · Kubernetes
+**Cloud & MLOps** — AWS (SageMaker, Lambda, S3, EC2) · GCP (Vertex AI, BigQuery) · Azure (Databricks, Data Factory) · Weights & Biases · Docker · Kubernetes
 
-**Data Engineering** — Apache Airflow · PySpark · Snowflake · Kafka · BigQuery
+**Data Engineering** — Apache Airflow · PySpark · Databricks · Snowflake · Kafka · BigQuery
 
-**Backend & Web** — FastAPI · Spring Boot · React · Streamlit · REST · SSE · JWT
+**Backend & Web** — FastAPI · Spring Boot · React · Node.js · Streamlit · REST · SSE · JWT
 
 **Databases** — PostgreSQL · MongoDB · MySQL · Redis · SQLite
 
