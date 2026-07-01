@@ -18,7 +18,6 @@ I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the Univer
 
 I like the unglamorous parts: figuring out *why* one model is 18× slower than another, catching a retrieval pipeline that hallucinates on out-of-scope questions, or proving an agent's output is correct before it ships. Before focusing on AI, I built backend microservices and data pipelines, so I tend to think about models and the infrastructure around them together.
 
-Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM routing and evaluation.
 
 ---
 
