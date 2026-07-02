@@ -14,10 +14,11 @@
 
 ### About
 
-I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the University at Buffalo. Most of my work sits at the point where language models meet real systems, taking a promising demo and turning it into something with access control, cost budgets, and evaluation you can actually trust.
+I'm an AI/ML engineer finishing my M.S. in Artificial Intelligence at the University at Buffalo. Most of my work sits at the point where language models meet real systems — taking a promising demo and turning it into something with access control, cost budgets, and evaluation you can actually trust.
 
 I like the unglamorous parts: figuring out *why* one model is 18× slower than another, catching a retrieval pipeline that hallucinates on out-of-scope questions, or proving an agent's output is correct before it ships. Before focusing on AI, I built backend microservices and data pipelines, so I tend to think about models and the infrastructure around them together.
 
+Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM routing and evaluation.
 
 ---
 
@@ -34,7 +35,7 @@ I like the unglamorous parts: figuring out *why* one model is 18× slower than a
 
 **Languages** — Python · SQL · TypeScript · JavaScript
 
-**GenAI & LLMs** — RAG · Hybrid Search · Embeddings · LangChain · LangGraph · Multi-Agent Orchestration · LLM Agents & Tool Calling · ReAct · MCP · Prompt Engineering · Fine-Tuning (PEFT / LoRA / QLoRA)
+**GenAI & LLMs** — RAG · Hybrid Search · Embeddings · LangChain · LangGraph · OpenAI Agents SDK · Multi-Agent Orchestration · LLM Agents & Tool Calling · ReAct · MCP · Guardrails · Prompt Engineering · Fine-Tuning (PEFT / LoRA / QLoRA)
 
 **LLM APIs & Evaluation** — Anthropic · OpenAI · Gemini · Groq · Hugging Face · RAGAS · LLM-as-Judge · Hallucination Detection
 
@@ -54,23 +55,26 @@ I like the unglamorous parts: figuring out *why* one model is 18× slower than a
 
 ### Featured Projects
 
-** [Multi-Agent Coding Assistant](https://github.com/HamsikaRaj/multi-agent-coding-assistant)** &nbsp;·&nbsp; `LangGraph` `FastAPI` `React` `Claude`
-A 5-agent pipeline (Planner - Architect - Coder - two Reviewers) that turns a single prompt into a multi-file codebase, it shipped a 25-file React/TypeScript app in one run, with a self-correcting review loop that retries up to 3× to repair broken output before it ships. I routed models per task (Opus for generation, Sonnet for planning/review, a Haiku intent classifier out front) so a full dual-reviewer cycle costs ~$0.0007, and streamed per-agent tokens/latency/cost over SSE to find the real bottleneck.
+**🔎 [Research-and-Report Agents](https://github.com/HamsikaRaj/research-report-agents)** &nbsp;·&nbsp; `OpenAI Agents SDK` `MCP` `FastAPI` `Guardrails`
+A three-agent research system on the OpenAI Agents SDK: a Planner delegates via typed handoffs, an Executor gathers grounded evidence through function tools and a custom MCP server, and a Reviewer returns a guardrail-checked, typed `ReportResult`. Runs stream token-by-token over both a CLI and an SSE endpoint, with input/output guardrails (PII and groundedness), a custom tracing processor for tokens/latency/cost, and a golden-set eval harness with an LLM judge behind a pytest regression gate.
 
-** [RAG Evaluation Harness](https://github.com/HamsikaRaj/rag-eval-harness)** &nbsp;·&nbsp; `FastAPI` `FAISS` `Claude` `Pytest`
+**🤖 [Multi-Agent Coding Assistant](https://github.com/HamsikaRaj/multi-agent-coding-assistant)** &nbsp;·&nbsp; `LangGraph` `FastAPI` `React` `Claude`
+A 5-agent pipeline (Planner → Architect → Coder → two Reviewers) that turns a single prompt into a multi-file codebase — it shipped a 25-file React/TypeScript app in one run, with a self-correcting review loop that retries up to 3× to repair broken output before it ships. I routed models per task (Opus for generation, Sonnet for planning/review, a Haiku intent classifier out front) so a full dual-reviewer cycle costs ~$0.0007, and streamed per-agent tokens/latency/cost over SSE to find the real bottleneck.
+
+**📊 [RAG Evaluation Harness](https://github.com/HamsikaRaj/rag-eval-harness)** &nbsp;·&nbsp; `FastAPI` `FAISS` `Claude` `Pytest`
 An automated harness that uses Claude as an LLM-judge to replace manual RAG scoring, cutting evaluation effort ~90%. On a 75-question benchmark it measured faithfulness 0.996, hallucination rate 0.017, and Recall@5 0.87 / Recall@10 0.92. The retrieval layer is pluggable across FAISS, ChromaDB, Qdrant, and Weaviate, so benchmarking a new backend is a one-config change.
 
-** [FinSolve — RAG with Role-Based Access Control](https://github.com/HamsikaRaj/FinSolve-RBAC-RAG)** &nbsp;·&nbsp; `FastAPI` `Qdrant` `Claude` `JWT`
+**🔐 [FinSolve — RAG with Role-Based Access Control](https://github.com/HamsikaRaj/FinSolve-RBAC-RAG)** &nbsp;·&nbsp; `FastAPI` `Qdrant` `Claude` `JWT`
 A RAG chatbot where access is enforced at the vector-search layer: dual-layer RBAC across 6 role tiers and 5 department knowledge bases, reaching 100% access-control accuracy and 0 hallucinations across 16 adversarial test cases. Roles are derived dynamically from a 100-person HR dataset via JWT, and I replaced a local Llama 3.2 model that hallucinated on every out-of-scope query with Claude Sonnet, taking fabricated responses to zero.
 
-** [RL for Derivatives Markets](https://github.com/HamsikaRaj/rl-options-trading)** &nbsp;·&nbsp; `PyTorch` `OpenAI Gym` `DDQN`
+**📈 [RL for Derivatives Markets](https://github.com/HamsikaRaj/rl-options-trading)** &nbsp;·&nbsp; `PyTorch` `OpenAI Gym` `DDQN`
 A custom Gym environment with a 5-dimensional state space and a reward function I designed and debugged (an early version reward-hacked before I diagnosed and fixed it). A DDQN agent with prioritized experience replay took reward from near-zero to a 600+ moving average over 900 episodes, reaching 15% ROI with zero major drawdowns on NVDA call-option data.
 
-** [VARLite — Real-Time Offside Detection](https://github.com/HamsikaRaj/VARLite)** &nbsp;·&nbsp; `YOLOv8n` `OpenCV` `NumPy`
+**⚽ [VARLite — Real-Time Offside Detection](https://github.com/HamsikaRaj/VARLite)** &nbsp;·&nbsp; `YOLOv8n` `OpenCV` `NumPy`
 Offside detection from single-camera football footage at >20 FPS and 95% detection accuracy on consumer GPUs, using YOLOv8n with SVD-based vanishing-point perspective correction. Multi-threaded video pipelines with geometric reconstruction and HSV team classification improved offside-call precision by 32%.
 
-** [Ripple — AI Policy Simulator](https://github.com/HamsikaRaj/Ripple)** &nbsp;·&nbsp; `React` `Gemini` `Monte Carlo`
-A deployed web app that pairs Monte Carlo simulation with Gemini to explore the downstream effects of policy changes, minimum wage, taxes, housing subsidies across a synthetic population, before any of it happens in the real world.
+**🌊 [Ripple — AI Policy Simulator](https://github.com/HamsikaRaj/Ripple)** &nbsp;·&nbsp; `React` `Gemini` `Monte Carlo`
+A deployed web app that pairs Monte Carlo simulation with Gemini to explore the downstream effects of policy changes — minimum wage, taxes, housing subsidies — across a synthetic population, before any of it happens in the real world.
 
 ---
 
