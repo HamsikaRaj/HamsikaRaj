@@ -35,19 +35,19 @@ Right now I'm a Data Engineer at Saayam for All, working on multi-provider LLM r
 
 **Languages** — Python · SQL · TypeScript · JavaScript
 
-**GenAI & LLMs** — RAG · Hybrid Search · Embeddings · LangChain · LangGraph · OpenAI Agents SDK · Multi-Agent Orchestration · LLM Agents & Tool Calling · ReAct · MCP · Guardrails · Prompt Engineering · Fine-Tuning (PEFT / LoRA / QLoRA)
+**GenAI & LLMs** — RAG · Hybrid Search · Embeddings · LangChain · LangGraph · OpenAI Agents SDK · Multi-Agent Orchestration · Agent Handoffs · LLM Agents & Tool Calling · ReAct · MCP · Guardrails · Prompt Engineering · Fine-Tuning (PEFT / LoRA / QLoRA)
 
-**LLM APIs & Evaluation** — Anthropic · OpenAI · Gemini · Groq · Hugging Face · RAGAS · LLM-as-Judge · Hallucination Detection
+**LLM APIs & Evaluation** — Anthropic · OpenAI · Responses API · Gemini · Groq · Hugging Face · RAGAS · LLM-as-Judge · Hallucination Detection
 
 **ML & Deep Learning** — PyTorch · TensorFlow · Transformers · scikit-learn · XGBoost · CNNs / LSTM · DQN / DDQN · Reward Design
 
 **Retrieval & Vector DBs** — FAISS · Qdrant · ChromaDB · Weaviate · Sentence Transformers
 
-**Cloud & MLOps** — AWS (SageMaker, Lambda, S3, EC2) · GCP (Vertex AI, BigQuery) · Azure (Databricks, Data Factory) · Weights & Biases · Docker · Kubernetes
+**Cloud & MLOps** — AWS (SageMaker, Lambda, S3, EC2) · GCP (Vertex AI, BigQuery) · Azure (Databricks, Data Factory) · Weights & Biases · Tracing & Observability · Docker · Kubernetes
 
 **Data Engineering** — Apache Airflow · PySpark · Databricks · Snowflake · Kafka · BigQuery
 
-**Backend & Web** — FastAPI · Spring Boot · React · Node.js · Streamlit · REST · SSE · JWT
+**Backend & Web** — FastAPI · Spring Boot · React · Node.js · Streamlit · Pydantic · REST · SSE · JWT · Pytest
 
 **Databases** — PostgreSQL · MongoDB · MySQL · Redis · SQLite
 
