@@ -67,9 +67,6 @@ An automated harness that uses Claude as an LLM-judge to replace manual RAG scor
 **🔐 [FinSolve — RAG with Role-Based Access Control](https://github.com/HamsikaRaj/FinSolve-RBAC-RAG)** &nbsp;·&nbsp; `FastAPI` `Qdrant` `Claude` `JWT`
 A RAG chatbot where access is enforced at the vector-search layer: dual-layer RBAC across 6 role tiers and 5 department knowledge bases, reaching 100% access-control accuracy and 0 hallucinations across 16 adversarial test cases. Roles are derived dynamically from a 100-person HR dataset via JWT, and I replaced a local Llama 3.2 model that hallucinated on every out-of-scope query with Claude Sonnet, taking fabricated responses to zero.
 
-**📈 [RL for Derivatives Markets](https://github.com/HamsikaRaj/rl-options-trading)** &nbsp;·&nbsp; `PyTorch` `OpenAI Gym` `DDQN`
-A custom Gym environment with a 5-dimensional state space and a reward function I designed and debugged (an early version reward-hacked before I diagnosed and fixed it). A DDQN agent with prioritized experience replay took reward from near-zero to a 600+ moving average over 900 episodes, reaching 15% ROI with zero major drawdowns on NVDA call-option data.
-
 **⚽ [VARLite — Real-Time Offside Detection](https://github.com/HamsikaRaj/VARLite)** &nbsp;·&nbsp; `YOLOv8n` `OpenCV` `NumPy`
 Offside detection from single-camera football footage at >20 FPS and 95% detection accuracy on consumer GPUs, using YOLOv8n with SVD-based vanishing-point perspective correction. Multi-threaded video pipelines with geometric reconstruction and HSV team classification improved offside-call precision by 32%.
 
